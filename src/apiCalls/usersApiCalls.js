@@ -5,7 +5,7 @@ axios.defaults.withCredentials = true;
 export const signup = async (dispatchUsers, data) => {
   try {
     const response = await axios.post
-      (`${process.env.REACT_APP_API} /users/signup`,
+   (`${process.env.REACT_APP_API}/users/signup`,
       data
     );
 
@@ -30,7 +30,7 @@ export const login = async (dispatchUsers, data) => {
 
 export const logout = async (dispatchUsers) => {
   try {
-    await axios.get(`${process.env.REACT_APP_API}`);
+    await axios.get(`${process.env.REACT_APP_API}/users/logout`);
     dispatchUsers({ type: "LOGOUT" });
   } catch (error) {
     console.log(error);
