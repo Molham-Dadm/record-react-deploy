@@ -1,4 +1,5 @@
 import axios from "axios";
+axios.defaults.withCredentials = true;
 
 //! Add an item to the cart
 export const addCartItem = async (

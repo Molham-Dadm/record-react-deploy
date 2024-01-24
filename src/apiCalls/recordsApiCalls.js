@@ -1,5 +1,5 @@
 import axios from "axios";
-
+axios.defaults.withCredentials = true;
 const getAllRecords = async (dispatchRecords) => {
   try {
     const response = await axios.get (`${process.env.REACT_APP_API}/records`);
